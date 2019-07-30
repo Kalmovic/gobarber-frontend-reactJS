@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { lighten } from 'polished';
 
 export const Container = styled.div`
   max-width: 600px;
@@ -34,9 +35,7 @@ export const Container = styled.div`
 export const Time = styled.li`
   padding: 20px;
   border-radius: 4px;
-  background: #fff;
-
-  opacity: ${props => (props.past ? 0.6 : 1)};
+  background: ${props => (props.past ? lighten(0.35, '#7159c1') : '#fff')};
 
   strong {
     display: block;
